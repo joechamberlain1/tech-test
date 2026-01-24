@@ -15,6 +15,18 @@ class Application extends Model
         'status' => ApplicationStatus::class,
     ];
 
+    protected $fillable = [
+        'status',
+        'order_id',
+        'customer_id',
+        'plan_id',
+        'address_1',
+        'address_2',
+        'city',
+        'state',
+        'postcode',
+    ];
+
     protected $dispatchesEvents = [
         'created' => ApplicationCreated::class,
     ];
